@@ -1,6 +1,5 @@
 # Funding_visualization
 
-This was a short and intense project done for a university project. It explores how the Danish Research Fund distributes funding to different sciencetific fields. It is written in python and deployed using https://streamlit.io  
-Note that this repo itself is quite a mess since it was a short and intense project, and in the future I would certainly love to refactor it completely. However, the live webapp is interesting:  
+This is a minor personal project. It started as a university project, but I have since taken the data and tried to make it more visually appealing. This dashboard visualisez how DFF (Danmarks Frie Forskningsfond) have funded different universities, sciencetific fields and research topics from 2013 to 2022 The data have been scraped from DFF's public records of research grants and cleaned using pandas. It has been deployed with streamlit.  
 
-Webapp: https://funding-visualizer.streamlit.app  
+Webapp: https://dff-visualizer.streamlit.app/
