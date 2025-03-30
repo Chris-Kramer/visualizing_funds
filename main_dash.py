@@ -88,9 +88,9 @@ if not df.empty:
             display_dict["Total Funding"].append(all_sum)
             display_dict["Number of Projects"].append(num_projects)                    
     display_df = pd.DataFrame.from_dict(display_dict)
-    display_df['Average Project Funding (Millioner)'] = display_df['Average Project Funding'].apply(lambda x: "${:.1f}M Dkk".format((x/1000000)))
-    display_df['Total Funding (Millioner)'] = display_df['Total Funding'].apply(lambda x: "{:.1f}M Dkk".format(x/1000000))
-    display_df = display_df[["Institution", "Number of Projects", "Total Funding (Millioner)", "Average Project Funding (Millioner)"]]
+    display_df['Average Project Funding (Millions)'] = display_df['Average Project Funding'].apply(lambda x: "${:.1f}M Dkk".format((x/1000000)))
+    display_df['Total Funding (Millions)'] = display_df['Total Funding'].apply(lambda x: "{:.1f}M Dkk".format(x/1000000))
+    display_df = display_df[["Institution", "Number of Projects", "Total Funding (Millions)", "Average Project Funding (Millions)"]]
     st.table(display_df, )
     "---"
     "\n"
