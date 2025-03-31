@@ -34,7 +34,7 @@ st.write("""
          """)
 
 # Select Institution
-st.write(f"### Select Institution and Year", anchor="select")
+st.write(f"### Select Institution and Year")
 st.write("**Choose Institution(s)**")
 all_options = st.checkbox("Select all Institutions")
 if all_options:
