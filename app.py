@@ -227,9 +227,7 @@ if not df.empty:
         "---"
 
 else:
-    st.write("**No data to display **")                
-
-"---"
+    st.write("**No data to display **")
 
 
 
