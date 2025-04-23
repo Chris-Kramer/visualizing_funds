@@ -1,18 +1,24 @@
-# Use a lightweight Python image
+# Use a slim Python 3.11 base
 FROM python:3.11-slim
 
-# Set working directory
+# Set the working directory
 WORKDIR /app
 
-# Copy files
+# Copy core files
 COPY requirements.txt ./
 COPY app.py ./
+COPY logo.png ./
 
-# Install dependencies
+# Copy project directories
+COPY data/ ./data/
+COPY styling/ ./styling/
+COPY visualization_modules/ ./visualization_modules/
+
+# Install Python dependencies
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Streamlit listens on port 8501 by default
+# Expose the default Streamlit port
 EXPOSE 8501
 
-# Run the app
+# Run the Streamlit app
 CMD ["streamlit", "run", "app.py", "--server.enableCORS", "false", "--server.enableXsrfProtection", "false"]
