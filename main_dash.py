@@ -64,8 +64,8 @@ if not df.empty:
 
     if "All" in locations:
         inst_choice = "All institutions"           
-        all_sum = sum(full_df["Bevilliget beløb"])
-        num_projects = len(full_df)
+        all_sum = sum(df["Bevilliget beløb"])
+        num_projects = len(df)
         try:
             avg_fund = all_sum//num_projects
         except ZeroDivisionError:
