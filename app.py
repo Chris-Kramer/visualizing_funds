@@ -36,8 +36,7 @@ st.write("""
 # Select Institution
 st.write(f"### Select Institution and Year")
 st.write("**Choose Institution(s)**")
-all_options = st.checkbox("Select all Institutions")
-all_options = True
+all_options = st.checkbox("Select all Institutions", value = True)
 if all_options:
     locations = institution.copy()
     locations.append("All")
